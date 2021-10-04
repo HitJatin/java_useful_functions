@@ -1,7 +1,7 @@
 public class factorial{
-    public static int factorial(int num){
+    public static int factorialNum(int num){
         if(num==0 || num==1)
         return 1;
-        return num*factorial(num-1);
+        return num*factorialNum(num-1);
     }
 }
