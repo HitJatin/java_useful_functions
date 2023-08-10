@@ -12,7 +12,7 @@ public class MergeSort {
         for (int i = 0; i < n1; i++) {
             leftArray[i] = inputArray[low + i];
         }
-        for (int i = 0; i < n1; i++) {
+        for (int i = 0; i < n2; i++) {
             rightArray[i] = inputArray[middle + i + 1];
         }
 
