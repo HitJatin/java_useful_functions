@@ -1,10 +1,15 @@
 public class combination {
     public static int combinationOfNum(int n, int r){
-        return factorial(n)/(factorial(n-r)*factorial(r));
-    }
-    public static int factorial(int num){
-        if(num==0 || num==1)
-        return 1;
-        return num*factorial(num-1);
+        if (r > n - r) {
+            r = n - r; // Choose the smaller value of r for optimization
+        }
+        
+        long result = 1;
+        for (int i = 1; i <= r; i++) {
+            result *= n - r + i;
+            result /= i;
+        }
+        
+        return (int)result;
     }
 }
